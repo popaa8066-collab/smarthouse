@@ -1,0 +1,73 @@
+body {
+    font-family: Arial, sans-serif;
+    transition: background-color 2s;
+    background-color: #e0f7fa; /* zi */
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: #00796b;
+}
+
+.simulator {
+    margin-top: 20px;
+}
+
+#baterie {
+    margin: 10px 0;
+}
+
+.baterie-bar {
+    width: 200px;
+    height: 20px;
+    border: 2px solid #00796b;
+    margin: 5px auto;
+    background-color: #b2dfdb;
+    position: relative;
+}
+
+#nivelBaterie {
+    height: 100%;
+    width: 0%;
+    background-color: #00796b;
+    transition: width 0.5s;
+}
+
+.consumatori {
+    display: flex;
+    justify-content: space-around;
+    margin: 15px 0;
+}
+
+.consumator {
+    font-size: 18px;
+    transition: all 0.5s;
+    cursor: grab;
+}
+
+/* Nori */
+.nor {
+    width: 100px;
+    height: 50px;
+    background: rgba(255,255,255,0.7);
+    border-radius: 50%;
+    position: absolute;
+}
+
+@keyframes miscareNor {
+    0% { left: -100px; }
+    100% { left: 100%; }
+}
+
+#nor1 { animation: miscareNor 25s linear infinite; top:50px; }
+#nor2 { animation: miscareNor 30s linear infinite; top:100px; }
+
+/* Drag&Drop highlight */
+.dropzone {
+    border: 2px dashed #00796b;
+    padding: 10px;
+    margin: 10px auto;
+    width: 220px;
+}
+

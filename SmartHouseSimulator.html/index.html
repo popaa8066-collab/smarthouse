@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Simulator Smart Eco House</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1>Simulator Smart Eco House</h1>
+
+    <div class="simulator">
+        <!-- Energie și baterie -->
+        <div id="panouri">Panouri solare: <span id="energieGen">0</span></div>
+        <div id="baterie">
+            Baterie: <span id="energieBat">0</span>
+            <div class="baterie-bar">
+                <div id="nivelBaterie"></div>
+            </div>
+        </div>
+
+        <!-- Consumatori vizuali -->
+        <div class="consumatori">
+            <div class="consumator draggable" id="lumina" draggable="true">💡 Lumina <button id="toggleLumina">On/Off</button></div>
+            <div class="consumator draggable" id="apa" draggable="true">🚰 Apă <button id="toggleApa">On/Off</button></div>
+            <div class="consumator draggable" id="incalzire" draggable="true">🔥 Încălzire <button id="toggleIncalzire">On/Off</button></div>
+        </div>
+
+        <!-- Slider intensitate soare -->
+        <label>Intensitate soare:</label>
+        <input type="range" id="sliderSoare" min="0" max="20" value="10">
+
+        <!-- Canvas pentru grafice -->
+        <canvas id="graficBaterie" width="400" height="200"></canvas>
+        <canvas id="grafLumina" width="400" height="100"></canvas>
+        <canvas id="grafApa" width="400" height="100"></canvas>
+        <canvas id="grafIncalzire" width="400" height="100"></canvas>
+
+        <!-- Nori -->
+        <div class="nor" id="nor1"></div>
+        <div class="nor" id="nor2"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
